@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Tracker</title>
+
+  <!-- Tailwind + DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- fontawesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="px-8 bg-slate-50">
+
+  <h1 class="text-xl mt-7 font-bold text-[#002C5C]">
+    Job Application Tracker
+  </h1>
+
+  <!-- Available Jobs -->
+  <section class="mt-10">
+
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-semibold">Available Jobs</h2>
+      <span id="jobCount" class="text-sm text-slate-500"></span>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-2 mb-6">
+      <button class="jobsbtn btn btn-sm bg-blue-700 text-white" data-filter="all">All</button>
+      <button class="jobsbtn btn btn-sm" data-filter="interview">Interview</button>
+      <button class="jobsbtn btn btn-sm" data-filter="rejected">Rejected</button>
+    </div>
+
+    <!-- Jobs Container -->
+    <div id="jobsContainer" class="space-y-4"></div>
+
+  </section>
+
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
