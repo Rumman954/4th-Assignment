@@ -11,13 +11,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-slate-50 min-h-screen px-6 sm:px-12 md:px-24 lg:px-[120px] xl:px-[245px]">
-  <div class="max-w-[1110px] mx-auto pt-[50px] pb-8">
-    <h1 class="text-3xl font-bold text-slate-800 mb-[20px]">
+<body class="bg-slate-50 min-h-screen px-4 sm:px-6 md:px-12 lg:px-24 xl:px-[245px]">
+  <div class="max-w-[1110px] mx-auto pt-6 sm:pt-[50px] pb-8">
+    <h1 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-4 sm:mb-[20px]">
       Job Application Tracker
     </h1>
 
-    <div class="grid grid-cols-3 gap-[20px] mb-[20px]">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-[20px] mb-4 sm:mb-[20px]">
       <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-6">
         <p class="text-sm text-slate-600 mb-2">Total</p>
         <p id="totalCount" class="text-3xl font-bold text-slate-800">0</p>
@@ -32,19 +32,19 @@
       </div>
     </div>
 
-    <div class="mb-[20px]">
-      <div class="flex justify-between items-center mb-[20px]">
-        <h2 class="text-xl font-bold text-slate-800">Available Jobs</h2>
+    <div class="mb-4 sm:mb-[20px]">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-4 sm:mb-[20px]">
+        <h2 class="text-lg sm:text-xl font-bold text-slate-800">Available Jobs</h2>
         <span id="jobCount" class="text-sm text-slate-400"></span>
       </div>
 
-      <div class="flex gap-2 mb-[20px]">
+      <div class="flex flex-wrap gap-2 mb-4 sm:mb-[20px]">
         <button type="button" class="jobsbtn px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 cursor-pointer" data-filter="all">All</button>
         <button type="button" class="jobsbtn px-4 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-300 hover:bg-slate-100 hover:border-slate-400 hover:text-slate-800 active:bg-slate-200 transition-all duration-200 cursor-pointer" data-filter="interview">Interview</button>
         <button type="button" class="jobsbtn px-4 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-300 hover:bg-slate-100 hover:border-slate-400 hover:text-slate-800 active:bg-slate-200 transition-all duration-200 cursor-pointer" data-filter="rejected">Rejected</button>
       </div>
 
-      <div id="jobsContainer" class="flex flex-col gap-[20px]"></div>
+      <div id="jobsContainer" class="flex flex-col gap-4 sm:gap-[20px]"></div>
     </div>
   </div>
 

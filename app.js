@@ -145,7 +145,7 @@ function renderJobs() {
 
   filteredJobs.forEach(function (job) {
     const card = document.createElement("div");
-    card.className = "bg-white p-6 rounded-lg shadow-sm border border-slate-200 relative jobCard";
+    card.className = "bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-slate-200 relative jobCard";
     card.dataset.id = job.id;
 
     card.innerHTML = `
@@ -231,12 +231,8 @@ function init() {
     if (!job) return;
 
     if (event.target.closest(".deleteBtn")) {
-      if (currentFilter === "all") {
-        const index = jobs.findIndex(j => j.id === id);
-        if (index !== -1) jobs.splice(index, 1);
-      } else {
-        job.status = "pending";
-      }
+      const index = jobs.findIndex(j => j.id === id);
+      if (index !== -1) jobs.splice(index, 1);
       renderJobs();
       return;
     }
