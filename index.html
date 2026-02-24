@@ -3,42 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Job Tracker</title>
+  <title>Job Application Tracker</title>
 
-  <!-- Tailwind + DaisyUI -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-  <!-- fontawesome -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <link rel="stylesheet" href="tailwind.init.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="px-8 bg-slate-50">
+<body class="bg-slate-50 min-h-screen px-6 sm:px-12 md:px-24 lg:px-[120px] xl:px-[245px]">
+  <div class="max-w-[1110px] mx-auto pt-[50px] pb-8">
+    <h1 class="text-3xl font-bold text-slate-800 mb-[20px]">
+      Job Application Tracker
+    </h1>
 
-  <h1 class="text-xl mt-7 font-bold text-[#002C5C]">
-    Job Application Tracker
-  </h1>
-
-  <!-- Available Jobs -->
-  <section class="mt-10">
-
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-semibold">Available Jobs</h2>
-      <span id="jobCount" class="text-sm text-slate-500"></span>
+    <div class="grid grid-cols-3 gap-[20px] mb-[20px]">
+      <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-6">
+        <p class="text-sm text-slate-600 mb-2">Total</p>
+        <p id="totalCount" class="text-3xl font-bold text-slate-800">0</p>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-6">
+        <p class="text-sm text-slate-600 mb-2">Interview</p>
+        <p id="interviewCount" class="text-3xl font-bold text-green-500">0</p>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-6">
+        <p class="text-sm text-slate-600 mb-2">Rejected</p>
+        <p id="rejectedCount" class="text-3xl font-bold text-red-500">0</p>
+      </div>
     </div>
 
-    <!-- Tabs -->
-    <div class="flex gap-2 mb-6">
-      <button class="jobsbtn btn btn-sm bg-blue-700 text-white" data-filter="all">All</button>
-      <button class="jobsbtn btn btn-sm" data-filter="interview">Interview</button>
-      <button class="jobsbtn btn btn-sm" data-filter="rejected">Rejected</button>
+    <div class="mb-[20px]">
+      <div class="flex justify-between items-center mb-[20px]">
+        <h2 class="text-xl font-bold text-slate-800">Available Jobs</h2>
+        <span id="jobCount" class="text-sm text-slate-400"></span>
+      </div>
+
+      <div class="flex gap-2 mb-[20px]">
+        <button type="button" class="jobsbtn px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 cursor-pointer" data-filter="all">All</button>
+        <button type="button" class="jobsbtn px-4 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-300 hover:bg-slate-100 hover:border-slate-400 hover:text-slate-800 active:bg-slate-200 transition-all duration-200 cursor-pointer" data-filter="interview">Interview</button>
+        <button type="button" class="jobsbtn px-4 py-2 rounded-full text-sm font-medium bg-white text-slate-600 border border-slate-300 hover:bg-slate-100 hover:border-slate-400 hover:text-slate-800 active:bg-slate-200 transition-all duration-200 cursor-pointer" data-filter="rejected">Rejected</button>
+      </div>
+
+      <div id="jobsContainer" class="flex flex-col gap-[20px]"></div>
     </div>
+  </div>
 
-    <!-- Jobs Container -->
-    <div id="jobsContainer" class="space-y-4"></div>
-
-  </section>
-
-  <script src="./scripts/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
