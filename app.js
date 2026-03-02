@@ -9,6 +9,7 @@ const jobs = [
     description: "Build cross-platform mobile applications using React Native.",
     status: "pending"
   },
+
   {
     id: 2,
     company: "WebFlow Agency",
@@ -19,6 +20,7 @@ const jobs = [
     description: "Design and build websites using Webflow.",
     status: "pending"
   },
+
   {
     id: 3,
     company: "Startup Labs",
@@ -29,6 +31,7 @@ const jobs = [
     description: "Work on modern frontend applications.",
     status: "pending"
   },
+
   {
     id: 4,
     company: "CloudNet Solutions",
@@ -39,6 +42,7 @@ const jobs = [
     description: "Develop scalable web applications using MERN stack.",
     status: "pending"
   },
+
   {
     id: 5,
     company: "AI Ventures",
@@ -49,6 +53,7 @@ const jobs = [
     description: "Build UI components for AI-powered platforms.",
     status: "pending"
   },
+
   {
     id: 6,
     company: "Ecomify",
@@ -59,6 +64,7 @@ const jobs = [
     description: "Develop and maintain e-commerce frontend features.",
     status: "pending"
   },
+
   {
     id: 7,
     company: "FinTech Hub",
@@ -69,6 +75,7 @@ const jobs = [
     description: "Create clean and accessible user interfaces for fintech apps.",
     status: "pending"
   },
+
   {
     id: 8,
     company: "DevStudio",
@@ -147,7 +154,7 @@ function renderJobs() {
     const card = document.createElement("div");
     card.className = "bg-white p-4 sm:p-6 rounded-lg shadow-sm border border-slate-200 relative jobCard";
     card.dataset.id = job.id;
-
+    
     card.innerHTML = `
       <button type="button"
         class="absolute cursor-pointer top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors deleteBtn">
