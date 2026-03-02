@@ -232,11 +232,9 @@ function init() {
 
     if (event.target.closest(".deleteBtn")) {
       if (currentFilter === "all") {
-        // Delete from All: remove job completely from everywhere
         const index = jobs.findIndex(j => j.id === id);
         if (index !== -1) jobs.splice(index, 1);
       } else {
-        // Delete from Interview or Rejected: move job back to "All" (set status to pending)
         job.status = "pending";
       }
       renderJobs();
